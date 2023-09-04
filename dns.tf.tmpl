@@ -1,0 +1,11 @@
+/*
+Below is a example record to create a "A" record for www.example.com 
+*/
+resource "cloudflare_record" "{name of the record}" {
+  zone_id  = var.zone_id                                # zone id 
+  name    = "{record name}"                             # e.g. www
+  value   = "{ip address or value}"                     # e.g. example.com
+  type    = "{type of record}"                          # e.g. A
+  proxied = {proxied by cloudflare}                     # e.g. true 
+  comment = "{comment}"                                 # e.g. some comment
+}
