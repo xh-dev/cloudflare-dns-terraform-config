@@ -25,7 +25,8 @@ This is simple project template for setup the terraform of controlling the DNS r
 ## Create new record
 Let say we own the domain `example.com`, the below example demo whole to create a `A record` of `main.example.com`
 
-1. Create file named `dns.tf` and file in the value as below script
+1. Rename the `dns.tf.tmpl` to dns.tf` (`mv dns.tf.tmpl dns.tf`)
+2. Update the example record as below
    ```shell
    resource "cloudflare_record" "{name of the record}" {
      zone_id  = var.zone_id                                
